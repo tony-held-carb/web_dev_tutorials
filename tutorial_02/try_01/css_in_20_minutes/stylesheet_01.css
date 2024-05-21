@@ -1,0 +1,26 @@
+.box_example_01{
+    background-color: red;
+    height: 200px;
+    width: 100px;
+    padding: 20px;
+    border: 10px solid black;
+    margin: 50px;
+}
+
+.box_example_02{
+    background-color: red;
+    height: 200px;
+    width: 10%;
+    padding: 20px;
+    border: 10px solid black;
+    margin: 50px;
+}
+
+.box_example_03{
+    background-color: red;
+    height: 200px;
+    width: 10em;
+    padding: 20px;
+    border: 10px solid black;
+    margin: 50px;
+}
