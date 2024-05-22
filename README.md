@@ -13,3 +13,7 @@
    - Did the quickstart
 6) Tutorial 04 [Bootstrap 5 Crash Course](https://www.youtube.com/watch?v=Jyvffr3aCp0)
    - Shows how the container, row, 12-column system works
+7) Tutorial 05 [How To Build Web Applications with Flask](https://www.digitalocean.com/community/tutorial-series/how-to-create-web-sites-with-flask)
+   - 13 topic tutorial series on flask
+   - [Topic 01: How To Create Your First Web Application Using Flask and Python 3](https://www.digitalocean.com/community/tutorials/how-to-create-your-first-web-application-using-flask-and-python-3)
+   - 
