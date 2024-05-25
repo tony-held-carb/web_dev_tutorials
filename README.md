@@ -19,4 +19,12 @@
    - [Topic 03: How To Handle Errors in a Flask Application](https://www.digitalocean.com/community/tutorials/how-to-handle-errors-in-a-flask-application)
    - [Topic 04: How To Use Web Forms in a Flask Application](https://www.digitalocean.com/community/tutorials/how-to-use-web-forms-in-a-flask-application)
    - [Topic 05: How To Use and Validate Web Forms with Flask-WTF](https://www.digitalocean.com/community/tutorials/how-to-use-and-validate-web-forms-with-flask-wtf)
-   - 
+   - [Topic 06: How To Use an SQLite Database in a Flask Application](https://www.digitalocean.com/community/tutorials/how-to-use-an-sqlite-database-in-a-flask-application)
+   - [Topic 07: ]()
+   - [Topic 08: ]()
+   - [Topic 09: ]()
+   - [Topic 10: ]()
+   - [Topic 11: ]()
+   - [Topic 12: ]()
+   - [Topic 13: ]()
+   
