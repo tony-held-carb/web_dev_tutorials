@@ -20,9 +20,10 @@
    - [Topic 04: How To Use Web Forms in a Flask Application](https://www.digitalocean.com/community/tutorials/how-to-use-web-forms-in-a-flask-application)
    - [Topic 05: How To Use and Validate Web Forms with Flask-WTF](https://www.digitalocean.com/community/tutorials/how-to-use-and-validate-web-forms-with-flask-wtf)
    - [Topic 06: How To Use an SQLite Database in a Flask Application](https://www.digitalocean.com/community/tutorials/how-to-use-an-sqlite-database-in-a-flask-application)
-   - [Topic 07: ]()
-   - [Topic 08: ]()
-   - [Topic 09: ]()
+   - [Topic 07: How To Use a PostgreSQL Database in a Flask Application](https://www.digitalocean.com/community/tutorials/how-to-use-a-postgresql-database-in-a-flask-application)
+   - [Topic 08: How To Use MongoDB in a Flask Application](https://www.digitalocean.com/community/tutorials/how-to-use-mongodb-in-a-flask-application)
+     - I skipped this since we are not using MongoDB currently
+   - [Topic 09: How to Use Flask-SQLAlchemy to Interact with Databases in a Flask Application](https://www.digitalocean.com/community/tutorials/how-to-use-flask-sqlalchemy-to-interact-with-databases-in-a-flask-application)
    - [Topic 10: ]()
    - [Topic 11: ]()
    - [Topic 12: ]()
