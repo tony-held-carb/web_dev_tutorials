@@ -25,7 +25,7 @@
      - I skipped this since we are not using MongoDB currently
    - [Topic 09: How to Use Flask-SQLAlchemy to Interact with Databases in a Flask Application](https://www.digitalocean.com/community/tutorials/how-to-use-flask-sqlalchemy-to-interact-with-databases-in-a-flask-application)
    - [Topic 10: How to Use One-to-Many Database Relationships with Flask-SQLAlchemy](https://www.digitalocean.com/community/tutorials/how-to-use-one-to-many-database-relationships-with-flask-sqlalchemy)
-   - [Topic 11: ]()
-   - [Topic 12: ]()
-   - [Topic 13: ]()
+   - [Topic 11: How To Use Many-to-Many Database Relationships with Flask-SQLAlchemy](https://www.digitalocean.com/community/tutorials/how-to-use-many-to-many-database-relationships-with-flask-sqlalchemy)
+   - [Topic 12: How To Query Tables and Paginate Data in Flask-SQLAlchemy]()
+   - [Topic 13: How To Structure a Large Flask Application with Flask Blueprints and Flask-SQLAlchemy]()
    
