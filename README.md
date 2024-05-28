@@ -27,5 +27,6 @@
    - [Topic 10: How to Use One-to-Many Database Relationships with Flask-SQLAlchemy](https://www.digitalocean.com/community/tutorials/how-to-use-one-to-many-database-relationships-with-flask-sqlalchemy)
    - [Topic 11: How To Use Many-to-Many Database Relationships with Flask-SQLAlchemy](https://www.digitalocean.com/community/tutorials/how-to-use-many-to-many-database-relationships-with-flask-sqlalchemy)
    - [Topic 12: How To Query Tables and Paginate Data in Flask-SQLAlchemy](https://www.digitalocean.com/community/tutorials/how-to-query-tables-and-paginate-data-in-flask-sqlalchemy)
+     - skipped the pagination section 
    - [Topic 13: How To Structure a Large Flask Application with Flask Blueprints and Flask-SQLAlchemy]()
    

@@ -24,3 +24,8 @@ class Employee(db.Model):
 
     def __repr__(self):
         return f'<Employee {self.firstname} {self.lastname}>'
+
+@app.route('/')
+def index():
+    employees = Employee.query.all()
+    return render_template('index.html', employees=employees)
