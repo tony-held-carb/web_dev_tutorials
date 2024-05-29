@@ -29,6 +29,7 @@
    - [Topic 12: How To Query Tables and Paginate Data in Flask-SQLAlchemy](https://www.digitalocean.com/community/tutorials/how-to-query-tables-and-paginate-data-in-flask-sqlalchemy)
      - skipped the pagination section 
    - [Topic 13: How To Structure a Large Flask Application with Flask Blueprints and Flask-SQLAlchemy](https://www.digitalocean.com/community/tutorials/how-to-structure-a-large-flask-application-with-flask-blueprints-and-flask-sqlalchemy)
+     - resume here 
 * Tutorial 07 [Modular Applications with Blueprints (Official Flask Docs)](https://flask.palletsprojects.com/en/latest/blueprints/)
   - 
    
