@@ -20,4 +20,4 @@ def comments():
                 'This is the fourth comment.'
                 ]
 
-    return render_template('comments.html', comments=comments)
+    return render_template('about.html', comments=comments)

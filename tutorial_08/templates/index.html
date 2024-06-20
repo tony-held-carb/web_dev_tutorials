@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="container">
+    <h2>{% block title %}Your index page{% endblock %}</h2>
+  <p>The time is: {{ utc_dt }}</p>
+  </div>
+{% endblock %}

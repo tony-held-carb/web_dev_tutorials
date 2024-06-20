@@ -59,7 +59,7 @@ def post(post_id):
 @app.route('/comments/')
 def comments():
   comments = Comment.query.order_by(Comment.id.desc()).all()
-  return render_template('comments.html', comments=comments)
+  return render_template('about.html', comments=comments)
 
 
 @app.post('/comments/<int:comment_id>/delete')

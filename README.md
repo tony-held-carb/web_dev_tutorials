@@ -32,4 +32,5 @@
      - resume here 
 * Tutorial 07 [Modular Applications with Blueprints (Official Flask Docs)](https://flask.palletsprojects.com/en/latest/blueprints/)
   - 
+* Tutorial 08 [How to use Macros in Jinja](https://www.geeksforgeeks.org/how-to-use-macros-in-jinja/)
    
