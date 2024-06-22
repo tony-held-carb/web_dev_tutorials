@@ -1,0 +1,10 @@
+
+
+{% macro repeat_phrase(phrase="phrase", num=3) %}
+  <p>phrase={{ phrase }}</p>
+  <p>num={{ num }}</p>
+
+  {% for i, j in zip(range(0,num), range(num, 0, -1)) %}
+    <p>{{ phrase }}: {{ i }}, {{ j }}</p>
+  {% endfor %}
+{% endmacro %}
