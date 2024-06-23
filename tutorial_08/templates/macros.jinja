@@ -4,7 +4,7 @@
   <p>phrase={{ phrase }}</p>
   <p>num={{ num }}</p>
 
-  {% for i, j in zip(range(0,num), range(num, 0, -1)) %}
+  {% for i, j in zip(range(0,num), range(num-1, -1, -1)) %}
     <p>{{ phrase }}: {{ i }}, {{ j }}</p>
   {% endfor %}
 {% endmacro %}

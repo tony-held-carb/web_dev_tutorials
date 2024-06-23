@@ -1,0 +1,19 @@
+{#Example of importing a macros from external file#}
+
+
+{% extends 'base.html' %}
+
+{% import 'macros.jinja' as macros %}
+
+{% set repeat_count=5 %}
+{% set my_phrase="Beware the Ides of March" %}
+
+{% block body_content %}
+  <div class="container">
+    <h2>{% block title %}Your about page{% endblock %}</h2>
+    <p>The time is: {{ utc_dt }}</p>
+
+    <p>Calling macro repeat_phrase({{ my_phrase }}, {{ repeat_count }}): {{ macros.repeat_phrase(my_phrase, repeat_count) }}</p>
+
+  </div>
+{% endblock %}

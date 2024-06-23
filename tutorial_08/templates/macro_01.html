@@ -1,0 +1,31 @@
+{#Example of how to use variable names and pas variables to macros#}
+
+{% extends 'base.html' %}
+
+{% macro hello() %}
+  Hello rendered from the macro hello().
+{% endmacro %}
+
+{% macro repeat_phrase(phrase="phrase", num=3) %}
+  <p>phrase={{ phrase }}</p>
+  <p>num={{ num }}</p>
+
+  {% for i, j in zip(range(0,num), range(num, -1, -1)) %}
+    <p>{{ phrase }}: {{ i }}, {{ j }}</p>
+  {% endfor %}
+{% endmacro %}
+
+{% set repeat_count=10 %}
+{% set my_phrase="My Name is Gumby!" %}
+
+
+{% block body_content %}
+  <div class="container">
+    <h2>{% block title %}Your index page{% endblock %}</h2>
+    <p>The time is: {{ utc_dt }}</p>
+    <p>Calling macro hello(): {{ hello() }}</p>
+    <p>Calling macro repeat_phrase({{ my_phrase }}, {{ repeat_count }}): {{ repeat_phrase(my_phrase, repeat_count) }}</p>
+{#  <p>This should fail since the variable is unknown. {{ unknown_variable }}</p>#}
+
+  </div>
+{% endblock %}

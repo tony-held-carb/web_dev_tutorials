@@ -1,0 +1,28 @@
+{#Example of calling a macro from within a macro#}
+
+
+{% extends 'base.html' %}
+
+
+
+{% block body_content %}
+  <div class="container">
+    <h2>{% block title %}Your calls page{% endblock %}</h2>
+    <p>The time is: {{ utc_dt }}</p>
+
+    {% macro render_dialog(title, class='dialog') -%}
+      <div class="{{ class }}">
+        <h2>{{ title }}</h2>
+        <div class="contents">
+          {{ caller() }}
+        </div>
+      </div>
+    {%- endmacro %}
+
+    {% call render_dialog('Hello World') %}
+      This is a simple dialog rendered by using a macro and
+      a call block.
+    {% endcall %}
+
+  </div>
+{% endblock %}

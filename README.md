@@ -31,6 +31,8 @@
    - [Topic 13: How To Structure a Large Flask Application with Flask Blueprints and Flask-SQLAlchemy](https://www.digitalocean.com/community/tutorials/how-to-structure-a-large-flask-application-with-flask-blueprints-and-flask-sqlalchemy)
      - resume here 
 * Tutorial 07 [Modular Applications with Blueprints (Official Flask Docs)](https://flask.palletsprojects.com/en/latest/blueprints/)
-* Tutorial 08 [How to use Macros in Jinja](https://www.geeksforgeeks.org/how-to-use-macros-in-jinja/)
-  - Allows reuse of code in jinja templates
+* Tutorial 08
+  * [Jinja2 Six Part Tutorial](https://ttl255.com/jinja2-tutorial-part-1-introduction-and-variable-substitution/)
+  * [How to use Macros in Jinja](https://www.geeksforgeeks.org/how-to-use-macros-in-jinja/)
+    - Allows reuse of code in jinja templates
    
