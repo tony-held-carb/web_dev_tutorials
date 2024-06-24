@@ -1,0 +1,21 @@
+{# Example of filtering from https://ttl255.com/jinja2-tutorial-part-4-template-filters/ #}
+{% extends 'base.html' %}
+
+{% set first_name = "my_first_name" %}
+{% set my_list = ["one", "two", "three", "four", 5, 6, 7] %}
+
+
+{% block body_content %}
+  <div class="container">
+    <h2>{% block title %}Your filtering page{% endblock %}</h2>
+    <p>The time is: {{ utc_dt }}</p>
+
+  <p>First name: {{ first_name | capitalize }}</p>
+  <p>First name: {{ first_name | upper }}</p>
+  <p>my_list: {{ my_list | capitalize }}</p>
+  <p>my_list: {{ my_list | random | capitalize }}</p>
+  <p>my_list: {{ my_list | join(", ") | capitalize }}</p>
+  <p>my_list: {{ my_list | map("capitalize") | join(", ") }}</p>
+
+  </div>
+{% endblock %}

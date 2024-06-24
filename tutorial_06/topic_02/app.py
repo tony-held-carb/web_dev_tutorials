@@ -10,7 +10,7 @@ def hello():
 
 @app.route('/about/')
 def about():
-    return render_template('about.html')
+    return render_template('macro_02.html')
 
 @app.route('/comments/')
 def comments():
@@ -20,4 +20,4 @@ def comments():
                 'This is the fourth comment.'
                 ]
 
-    return render_template('comments.html', comments=comments)
+    return render_template('macro_02.html', comments=comments)

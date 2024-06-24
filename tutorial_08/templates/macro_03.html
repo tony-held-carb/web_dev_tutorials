@@ -1,0 +1,15 @@
+{# Examples from: https://ttl255.com/jinja2-tutorial-part-5-macros/ #}
+
+
+{% extends 'base.html' %}
+
+
+{% block body_content %}
+  <div class="container">
+    <h2>{% block title %}Your macro_03 page{% endblock %}</h2>
+    <p>The time is: {{ utc_dt }}</p>
+
+    <p></p>
+
+  </div>
+{% endblock %}
