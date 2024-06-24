@@ -35,4 +35,5 @@
   * [Jinja2 Six Part Tutorial](https://ttl255.com/jinja2-tutorial-part-1-introduction-and-variable-substitution/)
   * [How to use Macros in Jinja](https://www.geeksforgeeks.org/how-to-use-macros-in-jinja/)
     - Allows reuse of code in jinja templates
+    - completed or scanned enough tutorials for a firm grasp on jinja
    
