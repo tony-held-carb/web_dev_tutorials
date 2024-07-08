@@ -8,29 +8,23 @@
   <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
           integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
           crossorigin="anonymous"></script>
-  <title>{% block title %} {% endblock %} - FlaskApp</title>
-  <style>
-      nav a {
-          color: #d64161;
-          font-size: 3em;
-          margin-left: 50px;
-          text-decoration: none;
-      }
-  </style>
-  {% import 'macros.jinja' as macros %}
-
+  {#  <script defer src="../scripts/portal_scripts_01.js"></script>#}
+</head>
+<title>{% block title %}Default Title{% endblock %}</title>
 </head>
 <body>
 <nav>
-  <a href="{{ url_for('index') }}">FlaskApp</a>
-  <a href="{{ url_for('courses') }}">Courses</a>
-  <a href="#">About</a>
+  Nav Bar Here
+  <a href="{{ url_for('index') }}">Index</a>
+  <a href="{{ url_for('about') }}">About</a>
+
 </nav>
 <hr>
-<div class="container">
-  <div class="content">
-    {% block content %} {% endblock %}
-  </div>
+<div class="content">
+  {% for message in get_flashed_messages() %}
+    <div class="alert">{{ message }}</div>
+  {% endfor %}
+  {% block body_content %}body_content block{% endblock %}
 </div>
 </body>
 </html>

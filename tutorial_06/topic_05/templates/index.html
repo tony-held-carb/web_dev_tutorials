@@ -1,77 +1,81 @@
 {% extends 'base.html' %}
 
+{% set size = 9 %}
+{% set label_size = 12 - size %}
+
 {% block content %}
-    <h1>{% block title %} Add a New Course {% endblock %}</h1>
+  <h1>{% block title %} Add a New Course {% endblock %}</h1>
 
-    <form method="POST" action="/">
-        {{ form.csrf_token }}
-        <p>
-            {{ form.title.label }}
-            {{ form.title(size=20) }}
-        </p>
+  <form method="POST" action="/" novalidate>
+    {{ form.csrf_token }}
 
-        {% if form.title.errors %}
-            <ul class="errors">
-                {% for error in form.title.errors %}
-                    <li>{{ error }}</li>
-                {% endfor %}
-            </ul>
-        {% endif %}
+    <div class="row mb-2">
+      <div class="col-sm-{{ label_size }}">
+        {{ form.title.label(class="col-form-label") }}
+      </div>
+      <div class="col-sm-{{ size }}">
+        {{ form.title(class="form-control") }}
+      </div>
+    </div>
 
-        <p>
-            {{ form.description.label }}
-        </p>
-        {{ form.description(rows=10, cols=50) }}
+    {{ macros.list_errors(form.title) }}
 
-        {% if form.description.errors %}
-            <ul class="errors">
-                {% for error in form.description.errors %}
-                    <li>{{ error }}</li>
-                {% endfor %}
-            </ul>
-        {% endif %}
+    <div class="row mb-2">
+      {{ form.description.label(class="col-form-label") }}
+      {{ form.description(rows=5, class="form-control") }}
+    </div>
 
-        <p>
-            {{ form.price.label }}
-            {{ form.price() }}
-        </p>
+    {{ macros.list_errors(form.description) }}
 
-        {% if form.price.errors %}
-            <ul class="errors">
-                {% for error in form.price.errors %}
-                    <li>{{ error }}</li>
-                {% endfor %}
-            </ul>
-        {% endif %}
+    <div class="row mb-2">
+      <div class="col-sm-{{ label_size }}">
+        {{ form.price.label(class="col-form-label") }}
+      </div>
+      <div class="col-sm-{{ size }}">
+        {{ form.price(class="form-control") }}
+      </div>
+    </div>
 
-        <p>
-            {{ form.available() }} {{ form.available.label }}
-        </p>
+    {{ macros.list_errors(form.price) }}
 
-        {% if form.available.errors %}
-            <ul class="errors">
-                {% for error in form.available.errors %}
-                    <li>{{ error }}</li>
-                {% endfor %}
-            </ul>
-        {% endif %}
+{#    <div class="row mb-2">#}
+{#      <div class="col-sm-{{ 1 }}">#}
+{#        {{ form.available(class="form-check-input", type="checkbox" ) }}#}
+{#      </div>#}
+{#      <div class="col-sm-{{ 11 }}">#}
+{#        {{ form.available.label(class="form-check-label") }}#}
+{#      </div>#}
+{#    </div>#}
 
-        <p>
-            {{ form.level.label }}
-            {{ form.level() }}
-        </p>
+    {{ macros.list_errors(form.available) }}
 
-        {% if form.level.errors %}
-            <ul class="errors">
-                {% for error in form.level.errors %}
-                    <li>{{ error }}</li>
-                {% endfor %}
-            </ul>
-        {% endif %}
+    <div class="row mb-2">
+        {{- form.available(class_="form-check-input", type="checkbox") -}}
+        {{- form.available.label(class_="form-check-label") -}}
+    </div>
 
-        <p>
-            <input type="submit" value="Add">
-        </p>
-    </form>
+    {{ macros.list_errors(form.available) }}
+{#    <p>#}
+{#      {{ form.available() }} {{ form.available.label }}#}
+{#    </p>#}
+
+
+    <p>
+      {{ form.level.label }}
+      {{ form.level() }}
+    </p>
+
+    {% if form.level.errors %}
+      <ul class="errors">
+        {% for error in form.level.errors %}
+          <li>{{ error }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+
+    <p>
+      <input type="submit" value="Add">
+    </p>
+  </form>
 
 {% endblock %}

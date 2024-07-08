@@ -1,0 +1,92 @@
+{# Jinja Macros for Web Portal #}
+
+{% macro input_element(data_dict,
+                       name,
+                       description,
+                       input_type="text",
+                       placeholder=None,
+                       size=9) %}
+
+  {% set label_size = 12 - size %}
+  {% set value_ = data_dict[name] %}
+
+
+  {% if input_type in ("text") %}
+    {% set type_statement='type="text"' %}
+  {% elif input_type in ("datetime-local") %}
+    {% set type_statement='type="datetime-local"' %}
+    {% set value_ = data_dict[name]|date_to_string %}
+  {% elif input_type in ("int") %}
+    {% set type_statement='type="number"' %}
+  {% elif input_type in ("float") %}
+    {% set type_statement='type="number" step="any"' %}
+  {% endif %}
+
+
+  <div class="row mb-2">
+    <label class="col-sm-{{ label_size }} col-form-label" for="{{ name }}">{{ description }}</label>
+    <div class="col-sm-{{ size }}">
+      <input class="form-control" {{ type_statement }} name="{{ name }}" id="{{ name }}"
+             value="{{ value_ if value_ }}"
+          {% if placeholder is not none %} placeholder="{{ placeholder }}" {% endif %}>
+    </div>
+  </div>
+
+{% endmacro %}
+
+{% macro text_area(data_dict,
+                   name,
+                   description,
+                   placeholder="Describe here (if applicable) ...",
+                   rows=3) %}
+
+  <div class="row">
+    <label class="form-label" for="{{ name }}">{{ description }}</label>
+  </div>
+
+  <div class="row mb-2">
+      <textarea class="form-control" name="{{ name }}" id="{{ name }}" rows="{{ rows }}"
+                placeholder="{{ placeholder }}">{{ data_dict[name] if data_dict[name] }}</textarea>
+  </div>
+
+{% endmacro %}
+
+
+{% macro drop_down_list(data_dict,
+                        drop_down_dict,
+                        name,
+                        description,
+                        size=9) %}
+  {#  Note, be careful on the types associated with drop downs!
+    Sometimes db store items as number and when they are compared to text there are equality/type issues.
+    As an initial strategy, I recommend that you always cast selectors to strings for equality determination.
+    Also, use int instead of boolean because it avoids some logic pitfalls of type conversions using this algorithm.
+#}
+
+  {% set label_size = 12 - size %}
+
+  <div class="row mb-2">
+    <label class="col-sm-{{ label_size }} col-form-label" for="{{ name }}">{{ description }}</label>
+    <div class="col-sm-{{ size }}">
+      <select class="form-select" name="{{ name }}" id="{{ name }}">
+        <option value="" selected disabled>Please Select</option>
+        {% for key_, value_ in drop_down_dict[name].items() %}
+          <option value="{{ key_ }}"
+              {% if key_|string == data_dict[name]|string %} selected {% endif %} >{{ value_ }}</option>
+        {% endfor %}
+      </select>
+    </div>
+  </div>
+{% endmacro %}
+
+
+{% macro list_errors(element) %}
+{#  Display errors associated with an html element#}
+  {% if element.errors %}
+    <ul class="errors">
+      {% for error in element.errors %}
+        <li>{{ error }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+{% endmacro %}

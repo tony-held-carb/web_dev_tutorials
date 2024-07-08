@@ -1,0 +1,29 @@
+{#Example of how to use variable names and pas variables to macros#}
+
+{% extends 'base.html' %}
+
+{% set size = 6 %}
+{% set label_size = 12 - size %}
+
+
+{% block body_content %}
+  <div class="container">
+    <h2>{% block title %}Your index page{% endblock %}</h2>
+    <p>The time is: {{ utc_dt }}</p>
+  </div>
+
+  <div class="container">
+    <form method="POST">
+      <form class="col-12">
+        <div class="row">
+
+          {{ form.username.label(class="col-sm-" ~ label_size ~ " col-form-label") }}
+          {#          <div class="col-sm-{{ size }}">#}
+          {{ form.username(class="col-sm-" ~ size ~ " form-control") }}
+          {#          </div>#}
+        </div>
+        <div>{{ form.password.label }}: {{ form.password() }}</div>
+      </form>
+  </div>
+
+{% endblock %}

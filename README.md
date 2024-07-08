@@ -36,4 +36,6 @@
   * [How to use Macros in Jinja](https://www.geeksforgeeks.org/how-to-use-macros-in-jinja/)
     - Allows reuse of code in jinja templates
     - completed or scanned enough tutorials for a firm grasp on jinja
+* Tutorial 09 [WTForms Crash Course](https://wtforms.readthedocs.io/en/3.0.x/crash_course/)
+* 
    

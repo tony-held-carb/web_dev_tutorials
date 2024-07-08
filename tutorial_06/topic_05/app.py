@@ -17,6 +17,15 @@ courses_list = [{
 @app.route('/', methods=('GET', 'POST'))
 def index():
     form = CourseForm()
+    for element in form:
+      print(f"{element=}")
+      if hasattr(element, 'data'):
+        print(f"{element.data=}")
+    print(f"{form.title=}")
+    print(f"{form.title.data=}")
+    print(f"{form['title']=}")
+    print(f"{form['title'].data=}")
+
     if form.validate_on_submit():
         courses_list.append({'title': form.title.data,
                              'description': form.description.data,
