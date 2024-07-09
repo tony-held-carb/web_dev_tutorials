@@ -31,3 +31,15 @@ def about():
   return render_template('about.html',
                          utc_dt=datetime.datetime.utcnow(),
                          )
+
+@app.route('/bootstrap_01/')
+def bootstrap_01():
+  return render_template('bootstrap_01.html',
+                         utc_dt=datetime.datetime.utcnow(),
+                         )
+
+@app.route('/bootstrap_02/')
+def bootstrap_02():
+  return render_template('bootstrap_02.html',
+                         utc_dt=datetime.datetime.utcnow(),
+                         )

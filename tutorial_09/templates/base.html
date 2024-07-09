@@ -17,10 +17,12 @@
   Nav Bar Here
   <a href="{{ url_for('index') }}">Index</a>
   <a href="{{ url_for('about') }}">About</a>
+  <a href="{{ url_for('bootstrap_01') }}">Bootstrap_01</a>
+  <a href="{{ url_for('bootstrap_02') }}">Bootstrap_02</a>
 
 </nav>
 <hr>
-<div class="content">
+<div class="container">
   {% for message in get_flashed_messages() %}
     <div class="alert">{{ message }}</div>
   {% endfor %}

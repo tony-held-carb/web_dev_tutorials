@@ -37,5 +37,7 @@
     - Allows reuse of code in jinja templates
     - completed or scanned enough tutorials for a firm grasp on jinja
 * Tutorial 09 [WTForms Crash Course](https://wtforms.readthedocs.io/en/3.0.x/crash_course/)
+  * also includes [How to Validate Forms with Bootstrap 5](https://designmodo.com/validate-forms-bootstrap/)
+  * 
 * 
    

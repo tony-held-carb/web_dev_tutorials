@@ -1,0 +1,26 @@
+{#Example of how to use variable names and pas variables to macros#}
+
+{% extends 'base.html' %}
+
+{% block body_content %}
+
+  <form class="col-12">
+
+    <div class="col-md-4">
+      <label for="validationSuccess" class="form-label text-success">Input with success</label>
+      <input type="text" class="form-control is-valid" id="validationSuccess" required>
+      <div class="valid-feedback">
+        This is a success state form validation message!
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <label for="validationError" class="form-label text-danger">Input with error</label>
+      <input type="text" class="form-control is-invalid" id="validationError" required>
+      <div class="invalid-feedback">
+        This is an error state form validation message!
+      </div>
+    </div>
+
+  </form>
+{% endblock %}
